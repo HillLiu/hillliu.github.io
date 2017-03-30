@@ -1,0 +1,34 @@
+{
+    "env": {
+        "build": {
+            "presets": [
+              "react",
+              "es2015",
+              "stage-0"
+            ],
+            "plugins": [
+              "add-module-exports",
+              "system-import-transformer",
+              "transform-object-assign",
+              "transform-react-constant-elements",
+              "transform-react-inline-elements"
+            ]
+        },
+        "production": {
+            "presets": [
+              "react",
+              "es2015",
+              "stage-0"
+            ],
+            "plugins": [
+              "add-module-exports",
+              "system-import-transformer",
+              "transform-object-assign",
+              "transform-react-constant-elements",
+              "transform-react-inline-elements",
+              "transform-react-pure-class-to-function",
+              "transform-react-remove-prop-types"
+            ]
+        }
+    }
+}
