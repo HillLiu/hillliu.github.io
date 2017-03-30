@@ -2305,8 +2305,8 @@ pmvc_react_landing@*:
     react-atomic-molecule ">=0.0.39"
 
 pmvc_react_portfolio@*:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.0.2.tgz#2b3059725036db1f5fbb5bff4b75b7cb5809a0cb"
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.0.3.tgz#afead6c14f67a8771d9605b0ff6348091e715ee8"
   dependencies:
     d3 "3.x"
     organism-react-animate "*"

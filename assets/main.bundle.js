@@ -14526,7 +14526,7 @@ var ExperienceBody = function (_Component) {
                 var to = pos.top - (headerPos.bottom - headerPos.top);
                 (0, _smoothScrollTo2.default)(to, delay, null, function () {
                     setTimeout(function () {
-                        tune(1);
+                        tune(200);
                     }, 500);
                 });
             };
