@@ -2591,8 +2591,8 @@ require-main-filename@^1.0.1:
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
 
 reshow-app@*:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.1.16.tgz#0a67b939dcd192a932869948e6c9de93c4ce3c24"
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.1.17.tgz#bf6b0d17648258c0b21c37bb3eb60ea9a90d1066"
   dependencies:
     babel-cli "^6.x"
     babel-core "^6.x"
@@ -2880,8 +2880,8 @@ ucfirst@*:
   resolved "https://registry.yarnpkg.com/ucfirst/-/ucfirst-1.0.0.tgz#4e105b6448d05e264ecec435e0b919363c5f2f2f"
 
 uglify-js@^2.8.5:
-  version "2.8.18"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.18.tgz#925d14bae48ab62d1883b41afe6e2261662adb8e"
+  version "2.8.20"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.20.tgz#be87100fbc18de3876ed606e9d24b4568311cecf"
   dependencies:
     source-map "~0.5.1"
     yargs "~3.10.0"
