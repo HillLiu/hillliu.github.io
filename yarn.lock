@@ -5914,9 +5914,9 @@ require-main-filename@^1.0.1:
   integrity sha1-l/cXtp1IeE9fUmpsWqj/3aBVpNE=
 
 reshow-app@^0.13.0-beta:
-  version "0.13.0-beta.1"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.13.0-beta.1.tgz#73d01359a1b52c588ed97cdce48b01c7bea9ab0e"
-  integrity sha512-cZojnCQvuNLaAZw+617ZuaGt5eAyxOuaqI1eeBxiktOy6G19FuiTvOkYsEazQdPBMQkEHfwsnwEuLd6xrao6HA==
+  version "0.13.0-beta.2"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.13.0-beta.2.tgz#c0cd3d12c6c29a7d59145f80188ce1e00fadc674"
+  integrity sha512-sYkDUHHYC13lw6WCYuS6Z8Iz05BOlcdgKWPPcBx7+9xFkKlmF1vx2kK+gJWxSw3C9cuVCxtKxXLlfFAalUd/LQ==
   dependencies:
     "@babel/cli" "^7.x"
     "@babel/core" "^7.x"

@@ -1,17 +1,19 @@
 #!/bin/sh
 find ./assets -name "*.js" | xargs rm -rf
 
+conf='{"assetsRoot":"./assets/", "externals":{"d3": "d3"}}'
+
 
 production(){
     echo "Production Mode";
     npm run build
-    CONFIG='{"assetsRoot":"./assets/", "webpackVendor": ["d3"]}' NODE_ENV=production webpack -p 
+    CONFIG=$conf NODE_ENV=production webpack -p 
 }
 
 develop(){
     echo "Develop Mode";
     npm run build
-    CONFIG='{"assetsRoot":"./assets/", "webpackVendor": ["d3"]}' webpack
+    CONFIG=$conf webpack
 }
 
 startServer(){
