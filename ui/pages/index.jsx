@@ -1,6 +1,6 @@
 import React, {Component} from 'react'; 
 import {Home} from 'pmvc_react_portfolio';
-import {ClientRoute} from 'reshow'; 
+import {ClientRoute} from 'reshow-url'; 
 import {ajaxDispatch} from 'organism-react-ajax';
 import {dispatch} from 'reshow';
 import ini from 'parse-ini-string';
@@ -51,7 +51,7 @@ class Index extends Component
                 {...props}
                 themes={themes}
                 themePath={themePath}
-                parseUrl={(url)=>{
+                onUrlChange={url=>handleAnchor=>goAnchorDelay=>{
                     const params = url.split('/');
                     const last = params.length-1;
                     if (params[last]) {

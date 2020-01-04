@@ -10,20 +10,20 @@
     "object-nested": "*",
     "parse-ini-string": "*",
     "pmvc_react_portfolio": "*",
-    "react": "^16.x",
     "react-atomic-molecule": "*",
     "react-atomic-organism": "*",
-    "react-dom": "^16.x",
-    "reshow": "*",
     "ricon": "*",
     "seturl": "*"
   },
   "devDependencies": {
-    "babel-cli": "*",
-    "reshow-app": "*"
+    "react": "^16.x",
+    "react-dom": "^16.x",
+    "reshow-app": "^0.13.0-beta",
+    "reshow-url": "*"
   },
   "scripts": {
-    "build": "rm -rf build && BABEL_ENV=build babel ui -d build/ui && BABEL_ENV=build babel src -d build/src",
-    "prepublish": "npm run build"
+    "clean": "find ./build ./assets -name '*.*' | xargs rm -rf",
+    "build": "npm run clean && BABEL_ENV=build babel ui -d build/ui && BABEL_ENV=build babel src -d build/src",
+    "prepublishOnly": "npm run build"
   }
 }

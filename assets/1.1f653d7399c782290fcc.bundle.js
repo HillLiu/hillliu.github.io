@@ -1,5 +1,369 @@
-webpackChunk([0],[
-/* 0 */
+webpackJsonp([1],{
+
+/***/ 897:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reshow_runtime_es_helpers_classCallCheck__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_createClass__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_reshow_runtime_es_helpers_typeof__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reshow_runtime_es_helpers_objectWithoutProperties__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_reshow_runtime_es_helpers_defineProperty__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_get_object_value__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_non_worker__ = __webpack_require__(922);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_superagent__ = __webpack_require__(923);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_superagent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_superagent__);
+
+
+
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { Object(__WEBPACK_IMPORTED_MODULE_4_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+var keys = Object.keys;
+var arrWs = {};
+
+var handleMessage = function handleMessage(e) {
+  var data = Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(e, ['data']);
+
+  switch (data.type) {
+    case 'initWs':
+      initWs(data.ws)(data.params);
+      break;
+
+    case 'closeWs':
+      closeWs(data.ws);
+      break;
+
+    case 'ajaxGet':
+      ajaxGet(data);
+      break;
+
+    case 'ajaxPost':
+      ajaxPost(data);
+      break;
+  }
+};
+
+var oNonWorker = new __WEBPACK_IMPORTED_MODULE_6_non_worker__["a" /* default */]().onMessage(handleMessage);
+var post = oNonWorker.post;
+/* harmony default export */ __webpack_exports__["default"] = (oNonWorker);
+
+var ajaxGet = function ajaxGet(_ref) {
+  var url = _ref.url,
+      action = _ref.action;
+  var params = Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(action, ['params'], {});
+
+  var headers = _objectSpread({}, Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(params, ['globalHeaders'], {}), {}, Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(params, ['headers'], {}), {
+    Accept: Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(params, ['accept'], 'application/json')
+  });
+
+  __WEBPACK_IMPORTED_MODULE_7_superagent___default.a.get(url).query(params.query).set(headers).end(function (err, res) {
+    if (res) {
+      var error = res.error,
+          _req = res.req,
+          text = res.text,
+          xhr = res.xhr,
+          response = Object(__WEBPACK_IMPORTED_MODULE_3_reshow_runtime_es_helpers_objectWithoutProperties__["a" /* default */])(res, ["error", "req", "text", "xhr"]);
+
+      post(_objectSpread({}, action, {
+        text: text,
+        response: response
+      }));
+    }
+  });
+};
+
+var ajaxPost = function ajaxPost(_ref2) {
+  var url = _ref2.url,
+      action = _ref2.action;
+
+  var _get = Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(action, ['params'], {}),
+      query = _get.query,
+      method = _get.method,
+      isSendJson = _get.isSendJson,
+      params = Object(__WEBPACK_IMPORTED_MODULE_3_reshow_runtime_es_helpers_objectWithoutProperties__["a" /* default */])(_get, ["query", "method", "isSendJson"]);
+
+  var headers = _objectSpread({}, Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(params, ['globalHeaders'], {}), {}, Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(params, ['headers'], {}), {
+    Accept: Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(params, ['accept'], 'application/json')
+  });
+
+  var isSend = false;
+
+  if (isSendJson) {
+    isSend = true;
+  } else {
+    if (null == isSendJson) {
+      keys(query).every(function (key) {
+        if ('object' !== Object(__WEBPACK_IMPORTED_MODULE_2_reshow_runtime_es_helpers_typeof__["a" /* default */])(query[key])) {
+          return true;
+        }
+
+        isSend = true;
+        return false;
+      });
+    }
+  }
+
+  var callReq;
+
+  switch (method) {
+    case 'delete':
+      callReq = __WEBPACK_IMPORTED_MODULE_7_superagent___default.a.del(url);
+      break;
+
+    case 'head':
+      callReq = __WEBPACK_IMPORTED_MODULE_7_superagent___default.a.head(url);
+      break;
+
+    case 'patch':
+      callReq = __WEBPACK_IMPORTED_MODULE_7_superagent___default.a.patch(url);
+      break;
+
+    case 'put':
+      callReq = __WEBPACK_IMPORTED_MODULE_7_superagent___default.a.put(url);
+      break;
+
+    default:
+      callReq = __WEBPACK_IMPORTED_MODULE_7_superagent___default.a.post(url);
+      break;
+  }
+
+  if (!isSend) {
+    callReq = callReq.type('form');
+  }
+
+  callReq.send(query).set(headers).end(function (err, res) {
+    if (res) {
+      var error = res.error,
+          _req2 = res.req,
+          text = res.text,
+          xhr = res.xhr,
+          response = Object(__WEBPACK_IMPORTED_MODULE_3_reshow_runtime_es_helpers_objectWithoutProperties__["a" /* default */])(res, ["error", "req", "text", "xhr"]);
+
+      post(_objectSpread({}, action, {
+        text: text,
+        response: response
+      }));
+    }
+  });
+};
+
+var closeWs = function closeWs(url) {
+  if (arrWs[url]) {
+    arrWs[url].close();
+    delete arrWs[url];
+  }
+
+  return !arrWs[url];
+};
+
+var WebSocketHelper =
+/*#__PURE__*/
+function () {
+  function WebSocketHelper(url, params) {
+    var _this = this;
+
+    Object(__WEBPACK_IMPORTED_MODULE_0_reshow_runtime_es_helpers_classCallCheck__["a" /* default */])(this, WebSocketHelper);
+
+    Object(__WEBPACK_IMPORTED_MODULE_4_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(this, "isWsConnect", false);
+
+    Object(__WEBPACK_IMPORTED_MODULE_4_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(this, "ping", function () {
+      _this.pingTimeout = setTimeout(function () {
+        if (!_this.isWsConnect) {
+          console.warn(_this.url, 'ajaxws-restore');
+
+          _this.open();
+        } else {
+          _this.ws.send(JSON.stringify({
+            type: 'ping'
+          }));
+        }
+
+        _this.ping();
+      }, 15000);
+    });
+
+    this.ws = null;
+    this.pingTimeout = null;
+    this.url = url;
+    this.params = params;
+    this.open();
+  }
+
+  Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_createClass__["a" /* default */])(WebSocketHelper, [{
+    key: "open",
+    value: function open() {
+      var _this2 = this;
+
+      if (this.isWsConnect) {
+        return;
+      }
+
+      var url = this.url;
+      var params = this.params;
+      var ws = new WebSocket(url);
+      this.ws = ws;
+
+      ws.onopen = function (e) {
+        _this2.isWsConnect = true;
+
+        _this2.ping();
+
+        var messages = params.messages;
+
+        if (Object(__WEBPACK_IMPORTED_MODULE_5_get_object_value__["a" /* default */])(messages, ['length'])) {
+          messages.forEach(function (m) {
+            return ws.send(JSON.stringify(m));
+          });
+        }
+      };
+
+      ws.onerror = function (e) {
+        _this2.isWsConnect = false;
+      };
+
+      ws.onmessage = function (e) {
+        switch (e.data) {
+          case 'pong':
+            break;
+
+          default:
+            post({
+              type: 'ws',
+              text: e.data,
+              url: url
+            });
+            break;
+        }
+      };
+
+      ws.onclose = function (e) {
+        _this2.isWsConnect = false;
+        console.warn('WS close', url);
+      };
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      this.ws.close();
+      clearTimeout(this.pingTimeout);
+    }
+  }]);
+
+  return WebSocketHelper;
+}();
+
+var initWs = function initWs(url) {
+  return function (params) {
+    var create = function create() {
+      arrWs[url] = new WebSocketHelper(url, params);
+    };
+
+    if (!arrWs[url]) {
+      create(url);
+    }
+  };
+};
+
+/***/ }),
+
+/***/ 918:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Check if `obj` is an object.
+ *
+ * @param {Object} obj
+ * @return {Boolean}
+ * @api private
+ */
+
+function isObject(obj) {
+  return null !== obj && 'object' === typeof obj;
+}
+
+module.exports = isObject;
+
+
+/***/ }),
+
+/***/ 922:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reshow_runtime_es_helpers_classCallCheck__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__ = __webpack_require__(7);
+
+
+
+var NonWorker = function NonWorker() {
+  var _this = this;
+
+  Object(__WEBPACK_IMPORTED_MODULE_0_reshow_runtime_es_helpers_classCallCheck__["a" /* default */])(this, NonWorker);
+
+  Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(this, "callbacks", []);
+
+  Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(this, "onMessage", function (callback) {
+    _this.onmessage = callback;
+
+    if ('undefined' === typeof window) {
+      onmessage = callback;
+    }
+
+    return _this;
+  });
+
+  Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(this, "addEventListener", function (type, callback) {
+    return _this.callbacks.push(callback);
+  });
+
+  Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(this, "postMessage", function (data) {
+    var e = {
+      data: data
+    };
+
+    _this.onmessage(e);
+  });
+
+  this.post = function (data) {
+    var e = {
+      data: data
+    };
+
+    _this.callbacks.forEach(function (c) {
+      return c(e);
+    });
+  };
+
+  if ('undefined' === typeof window) {
+    try {
+      var post = postMessage;
+      post({
+        type: 'ready'
+      });
+      this.post = post;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (NonWorker);
+
+/***/ }),
+
+/***/ 923:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -16,11 +380,11 @@ if (typeof window !== 'undefined') { // Browser window
   root = this;
 }
 
-var Emitter = __webpack_require__(9);
-var RequestBase = __webpack_require__(10);
-var isObject = __webpack_require__(8);
-var ResponseBase = __webpack_require__(11);
-var Agent = __webpack_require__(13);
+var Emitter = __webpack_require__(924);
+var RequestBase = __webpack_require__(925);
+var isObject = __webpack_require__(918);
+var ResponseBase = __webpack_require__(926);
+var Agent = __webpack_require__(928);
 
 /**
  * Noop.
@@ -190,7 +554,7 @@ request.types = {
 
 request.serialize = {
   'application/x-www-form-urlencoded': serialize,
-  'application/json': JSON.stringify,
+  'application/json': JSON.stringify
 };
 
 /**
@@ -204,7 +568,7 @@ request.serialize = {
 
 request.parse = {
   'application/x-www-form-urlencoded': parseString,
-  'application/json': JSON.parse,
+  'application/json': JSON.parse
 };
 
 /**
@@ -925,36 +1289,8 @@ request.put = function(url, data, fn) {
 
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-/**
- * Check if `obj` is an object.
- *
- * @param {Object} obj
- * @return {Boolean}
- * @api private
- */
-
-function isObject(obj) {
-  return null !== obj && 'object' === typeof obj;
-}
-
-module.exports = isObject;
-
-
-/***/ }),
-/* 9 */
+/***/ 924:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1070,6 +1406,13 @@ Emitter.prototype.removeEventListener = function(event, fn){
       break;
     }
   }
+
+  // Remove event specific arrays for event types that no
+  // one is subscribed for to avoid memory leak.
+  if (callbacks.length === 0) {
+    delete this._callbacks['$' + event];
+  }
+
   return this;
 };
 
@@ -1083,8 +1426,13 @@ Emitter.prototype.removeEventListener = function(event, fn){
 
 Emitter.prototype.emit = function(event){
   this._callbacks = this._callbacks || {};
-  var args = [].slice.call(arguments, 1)
+
+  var args = new Array(arguments.length - 1)
     , callbacks = this._callbacks['$' + event];
+
+  for (var i = 1; i < arguments.length; i++) {
+    args[i - 1] = arguments[i];
+  }
 
   if (callbacks) {
     callbacks = callbacks.slice(0);
@@ -1123,7 +1471,8 @@ Emitter.prototype.hasListeners = function(event){
 
 
 /***/ }),
-/* 10 */
+
+/***/ 925:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1132,7 +1481,7 @@ Emitter.prototype.hasListeners = function(event){
 /**
  * Module of mixed-in functions shared between node and client code
  */
-var isObject = __webpack_require__(8);
+var isObject = __webpack_require__(918);
 
 /**
  * Expose `RequestBase`.
@@ -1373,7 +1722,7 @@ RequestBase.prototype.then = function then(resolve, reject) {
   return this._fullfilledPromise.then(resolve, reject);
 };
 
-RequestBase.prototype.catch = function(cb) {
+RequestBase.prototype['catch'] = function(cb) {
   return this.then(undefined, cb);
 };
 
@@ -1824,7 +2173,8 @@ RequestBase.prototype._setTimeouts = function() {
 
 
 /***/ }),
-/* 11 */
+
+/***/ 926:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1834,7 +2184,7 @@ RequestBase.prototype._setTimeouts = function() {
  * Module dependencies.
  */
 
-var utils = __webpack_require__(12);
+var utils = __webpack_require__(927);
 
 /**
  * Expose `ResponseBase`.
@@ -1954,6 +2304,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
         : false;
 
     // sugar
+    this.created = 201 == status;
     this.accepted = 202 == status;
     this.noContent = 204 == status;
     this.badRequest = 400 == status;
@@ -1961,11 +2312,13 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.notAcceptable = 406 == status;
     this.forbidden = 403 == status;
     this.notFound = 404 == status;
+    this.unprocessableEntity = 422 == status;
 };
 
 
 /***/ }),
-/* 12 */
+
+/***/ 927:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2043,7 +2396,8 @@ exports.cleanHeader = function(header, changesOrigin){
 
 
 /***/ }),
-/* 13 */
+
+/***/ 928:
 /***/ (function(module, exports) {
 
 function Agent() {
@@ -2069,4 +2423,6 @@ module.exports = Agent;
 
 
 /***/ })
-]);
+
+});
+//# sourceMappingURL=1.1f653d7399c782290fcc.bundle.js.map
