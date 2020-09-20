@@ -1,6 +1,6 @@
 {
     "env": {
-        "test": {
+        "cjs": {
             "presets": [
               ["@babel/preset-env", {
                 "loose": true, 
@@ -10,9 +10,9 @@
             ],
             "plugins": [
               "add-module-exports",
-              "object-to-json-parse",
               "dynamic-import-node",
               "transform-react-pure-class-to-function",
+              "reshow-object-to-json-parse",
               ["reshow-transform-runtime", {
                 "regenerator": false,
                 "version": "7.5.0"
@@ -23,11 +23,12 @@
               "@babel/plugin-syntax-dynamic-import",
               "@babel/plugin-transform-object-assign",
               "@babel/plugin-transform-react-constant-elements",
+              "@babel/plugin-transform-spread",
               "@babel/plugin-proposal-class-properties",
               "@babel/plugin-proposal-object-rest-spread"
             ]
         },
-        "build": {
+        "es": {
             "presets": [
               ["@babel/preset-env", {
                 "loose": true, 
@@ -37,9 +38,9 @@
               "@babel/preset-react"
             ],
             "plugins": [
-              "object-to-json-parse",
               "transform-react-pure-class-to-function",
               ["transform-react-remove-prop-types", {"mode": "wrap"}],
+              "reshow-object-to-json-parse",
               ["reshow-transform-runtime", {
                 "regenerator": false,
                 "useESModules": true,
@@ -51,6 +52,7 @@
               "@babel/plugin-syntax-dynamic-import",
               "@babel/plugin-transform-object-assign",
               "@babel/plugin-transform-react-constant-elements",
+              "@babel/plugin-transform-spread",
               "@babel/plugin-proposal-class-properties",
               "@babel/plugin-proposal-object-rest-spread"
             ]
@@ -65,9 +67,9 @@
               "@babel/preset-react"
             ],
             "plugins": [
-              "object-to-json-parse",
               "transform-react-pure-class-to-function",
               ["transform-react-remove-prop-types", {"mode": "wrap"}],
+              "reshow-object-to-json-parse",
               ["reshow-transform-runtime", {
                 "regenerator": false,
                 "useESModules": true,
@@ -79,6 +81,7 @@
               "@babel/plugin-syntax-dynamic-import",
               "@babel/plugin-transform-object-assign",
               "@babel/plugin-transform-react-constant-elements",
+              "@babel/plugin-transform-spread",
               "@babel/plugin-proposal-class-properties",
               "@babel/plugin-proposal-object-rest-spread"
             ]
