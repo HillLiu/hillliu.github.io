@@ -27,6 +27,7 @@ class Index extends Component
             type: 'ajaxGet',
             params: {
                 url: source,
+                disableCacheBusting: true,
                 callback: (json, text)=>
                 {
                     let a = ini(text);

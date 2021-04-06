@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "cfde1df6b0a1ac3a77f0" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "a5a3d2f1f8b16d1354ac" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -301,6 +301,7 @@ var Index = /*#__PURE__*/function (_Component) {
       type: 'ajaxGet',
       params: {
         url: source,
+        disableCacheBusting: true,
         callback: function callback(json, text) {
           var a = Object(parse_ini_string__WEBPACK_IMPORTED_MODULE_8__["default"])(text);
           a = Object(object_nested__WEBPACK_IMPORTED_MODULE_9__["nest"])(a, '_');

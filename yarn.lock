@@ -1816,9 +1816,9 @@ babel-plugin-transform-react-remove-prop-types@*:
   integrity sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==
 
 balanced-match@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
-  integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
+  integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
 base64-js@^1.0.2:
   version "1.5.1"
@@ -3506,9 +3506,9 @@ entities@~2.1.0:
   integrity sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==
 
 envinfo@^7.7.3:
-  version "7.7.4"
-  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.7.4.tgz#c6311cdd38a0e86808c1c9343f667e4267c4a320"
-  integrity sha512-TQXTYFVVwwluWSFis6K2XKxgrD22jEv0FTuLCQI+OjH7rn93+iY0fSSFM5lrSxFY+H1+B0/cvvlamr3UsBivdQ==
+  version "7.8.1"
+  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.8.1.tgz#06377e3e5f4d379fea7ac592d5ad8927e0c4d475"
+  integrity sha512-/o+BXHmB7ocbHEAs6F2EnG0ogybVVUdkRunTT2glZU9XAaGmhqskrvKwqXuDfNjEO0LZKWdejEEpnq8aM0tOaw==
 
 enzyme-adapter-react-16@*:
   version "1.15.6"
@@ -6734,9 +6734,9 @@ ora@2.0.0:
     wcwidth "^1.0.1"
 
 organism-react-ajax@*:
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.14.5.tgz#25867cec57d037347fd9800d7aec35ec2ef4292e"
-  integrity sha512-LWFrINeOWHHv67InxH50z3ESRDyyhMFIfXBalDj6VRXwxy9KVSrU4vmptiREKS514eyz36H4xhIZpVAxs/h2XQ==
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.14.6.tgz#f2054c20a9bafaaefbc6a333f8647fec860d3d90"
+  integrity sha512-6/hG/VGgnMQ7BzOszsOL3/DoIMzEyOq65pTs3ci1DONPEKVgQwh7lxKUW45L5VixogQ9RZVDRZ8X9YDrkMu68Q==
   dependencies:
     call-func "*"
     es6-promise "4.2.5"
@@ -7992,9 +7992,9 @@ reshow-worker@*:
     worker-loader "*"
 
 reshow@*:
-  version "0.14.3"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.14.3.tgz#54c071ecd9f6f0a03da0d2678551c365b4e3b88e"
-  integrity sha512-2AZ+lb4aWSx5aSdQrEqlVzhgf4rin4LiWknQVGSt4ywdd0Zz04tkr0zOtvvlmFfADtr5eaL17tqLL5Hz1BtLoQ==
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.14.4.tgz#4c482b81678179d91de1b923dd824c8cf6cdf957"
+  integrity sha512-8Kk7wVCrwB1s144RuTDQUo0g63STDuYZfU8R24/xKmlvCUoOgA5wmPOV78aNHY27Tl0R5X3nO9Af94VK70TCew==
   dependencies:
     call-func "*"
     get-storage "*"

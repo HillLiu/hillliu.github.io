@@ -12408,7 +12408,7 @@ var AjaxStore = /*#__PURE__*/function (_ReduceStore) {
           params.query = {};
         }
 
-        if (!params.disableRandom) {
+        if (!params.disableCacheBusting) {
           params.query["--r"] = Object(get_random_id__WEBPACK_IMPORTED_MODULE_14__["default"])();
         } else {
           params.query["--r"] = state.get("staticVersion");
@@ -64644,10 +64644,11 @@ var Reshow = /*#__PURE__*/function (_PureComponent) {
     value: function resetGlobalPath(path) {
       var _this$props = this.props,
           themes = _this$props.themes,
-          defaultThemePath = _this$props.defaultThemePath;
+          defaultThemePath = _this$props.defaultThemePath,
+          themePath = _this$props.themePath;
 
       if (!themes[path]) {
-        path = defaultThemePath;
+        path = defaultThemePath || themePath;
       }
 
       if (themes[path]) {
