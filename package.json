@@ -18,7 +18,7 @@
   "devDependencies": {
     "react": "^16.x",
     "react-dom": "^16.x",
-    "reshow-app": "^0.13.0-beta",
+    "reshow-app": "*",
     "reshow-url": "*"
   },
   "scripts": {

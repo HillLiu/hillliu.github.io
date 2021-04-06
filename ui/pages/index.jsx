@@ -19,7 +19,7 @@ class Index extends Component
         let source = getUrl('source'); 
         if (!source) {
             const url = document.location;
-            const gitName = url.hostname.split('.')[0];
+            const gitName = getUrl('gitName') ?? url.hostname.split('.')[0];
             source='https://raw.githubusercontent.com/'+gitName+'/.env/master/.env.view';
         }
         
@@ -43,13 +43,11 @@ class Index extends Component
     render()
     {
         let {themePath, ...props} = this.props;
-        if (!themePath) {
-            themePath = 'home';
-        }
         return (
             <ClientRoute
                 {...props}
                 themes={themes}
+                defaultThemePath="home"
                 themePath={themePath}
                 onUrlChange={url=>handleAnchor=>goAnchorDelay=>{
                     const params = url.split('/');

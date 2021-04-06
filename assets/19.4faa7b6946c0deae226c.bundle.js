@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{130:function(n,e,r){"use strict";r.r(e),e["default"]=function(){return new Worker(r.p+"worker.bundle.worker.js")}}}]);
