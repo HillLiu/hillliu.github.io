@@ -1,13 +1,19 @@
 #!/bin/sh
+DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
-conf='{"assetsRoot":"./assets/", "externals":{"d3": "d3"}}'
+conf='{'
+conf+='"assetsRoot":"/assets/",'
+conf+='"swDest":"'${DIR}/service-worker.js'",'
+conf+='"devPort": "'${hotPort:-8080}'"'
+conf+='}'
+
 webpack='npm run webpack --'
 
 
 production(){
     echo "Production Mode";
     npm run build
-    CONFIG=$conf NODE_ENV=production $webpack -p 
+    CONFIG=$conf NODE_ENV=production $webpack
 }
 
 develop(){
@@ -30,7 +36,6 @@ killBy(){
 }
 
 stop(){
-    DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/babel 
     cat webpack.pid | xargs -I{} kill -9 {}
     npm run clean
