@@ -15,20 +15,26 @@ class Index extends Component {
     if (!source) {
       const url = document.location;
       const gitName = getUrl("gitName") ?? url.hostname.split(".")[0];
-      source =
-        "https://raw.githubusercontent.com/" +
-        gitName +
-        "/.env/master/.env.view";
+      if ("localhost" !== gitName) {
+        source =
+          "https://raw.githubusercontent.com/" +
+          gitName +
+          "/.env/master/.env.view";
+      } else {
+        console.warn("Need setup gitName with url http://xxx?gitName=yyy");
+      }
     }
-    ajaxDispatch("ajaxGet", {
-      url: source,
-      disableCacheBusting: true,
-      ini: true,
-    });
+    if (source) {
+      ajaxDispatch("ajaxGet", {
+        url: source,
+        disableCacheBusting: true,
+        ini: true,
+      });
+    }
   }
 
   render() {
-    let { themePath, ...props } = this.props;
+    const { themePath, ...props } = this.props;
     return (
       <ClientRoute
         {...props}

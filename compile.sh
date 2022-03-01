@@ -1,9 +1,10 @@
 #!/bin/sh
 DIR="$( cd "$(dirname "$0")" ; pwd -P )"
+SWJS=${DIR}/service-worker.js
 
 conf='{'
 conf+='"assetsRoot":"/assets/",'
-conf+='"swDest":"'${DIR}/service-worker.js'",'
+conf+='"swDest":"'${SWJS}'",'
 conf+='"devPort": "'${hotPort:-8080}'"'
 conf+='}'
 
@@ -59,6 +60,7 @@ watchTest(){
 
 hot(){
     stop 
+    rm $SWJS
     echo "Hot Mode";
     npm run build:es:ui -- --watch &
     npm run build:es:src -- --watch &
