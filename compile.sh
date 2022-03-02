@@ -20,7 +20,7 @@ production(){
 develop(){
     echo "Develop Mode";
     npm run build
-    CONFIG=$conf $webpack
+    HOT_UPDATE=0 CONFIG=$conf $webpack
 }
 
 startServer(){

@@ -7581,9 +7581,9 @@ organism-react-scroll-animate@*:
     react-atomic-molecule "*"
 
 organism-react-scroll-nav@*:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-0.15.0.tgz#befef10cdf1d82875cd3bdc158a60e94e15030d2"
-  integrity sha512-TaDHFS9T3Hlfnrrtf69qcRJwKgkzuDz9yrRlRnIQ3VvQ2mXPGTAHE8hJrjeUIBdfZgkLxWlujEWLygRee0MjFA==
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-0.15.2.tgz#3d21000141051b1e241a3f758f489d92b943fa4b"
+  integrity sha512-pdgT9var0WxrJQ0B9rFra29K2DvK3QS+ihY8xEfeKsgkX16LhXMC0mchr/xwxID/0hpRg4AFpNWvo+t5TdIu8w==
   dependencies:
     call-func "*"
     get-object-value "*"
