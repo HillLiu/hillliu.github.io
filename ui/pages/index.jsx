@@ -1,59 +1,51 @@
-import React, { Component } from "react";
-import { Home } from "pmvc_react_portfolio";
-import { ClientRoute } from "reshow-url";
+import { useEffect } from "react";
+import PortfolioThemes from "pmvc_react_portfolio";
+import { ClientRoute, disableHandleAnchor, getAnchorPath } from "reshow-url";
 import { ajaxDispatch } from "organism-react-ajax";
-import { dispatch } from "reshow";
 import { getUrl } from "seturl";
+import { sessionStorage } from "get-storage";
 
 const themes = {
-  home: Home,
+  ...PortfolioThemes,
 };
 
-class Index extends Component {
-  componentDidMount() {
-    let source = getUrl("source");
+const Index = ({ themePath, ...props }) => {
+  useEffect(() => {
+    const sourceSession = sessionStorage("source");
+    let source = sourceSession() || getUrl("source");
     if (!source) {
       const url = document.location;
-      const gitName = getUrl("gitName") ?? url.hostname.split(".")[0];
-      if ("localhost" !== gitName) {
+      const gitName =
+        getUrl("gitName", getAnchorPath().path) ?? url.hostname.split(".")[0];
+      if (gitName && "localhost" !== gitName) {
         source =
           "https://raw.githubusercontent.com/" +
           gitName +
           "/.env/master/.env.view";
+      } else if (-1 !== url.hostname.indexOf("localhost")) {
+        source = "/.env.view";
       } else {
         console.warn("Need setup gitName with url http://xxx?gitName=yyy");
       }
     }
     if (source) {
+      sourceSession(source);
       ajaxDispatch("ajaxGet", {
         url: source,
         disableCacheBusting: true,
         ini: true,
       });
     }
-  }
-
-  render() {
-    const { themePath, ...props } = this.props;
-    return (
-      <ClientRoute
-        {...props}
-        themes={themes}
-        defaultThemePath="home"
-        themePath={themePath}
-        onUrlChange={(url) => (handleAnchor) => (goAnchorDelay) => {
-          const params = url.split("/");
-          const last = params.length - 1;
-          if (params[last]) {
-            return {
-              portfolioId: params[last],
-            };
-          }
-          return { portfolioId: "" };
-        }}
-      />
-    );
-  }
-}
+  }, []);
+  return (
+    <ClientRoute
+      {...props}
+      themes={themes}
+      defaultThemePath="Home"
+      themePath={themePath}
+      onHashChange={disableHandleAnchor}
+    />
+  );
+};
 
 export default Index;

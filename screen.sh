@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCREEN_NAME="profile"
+SCREEN_NAME=`basename "$PWD"`
 
 exec() {
     tabName=$1
@@ -16,7 +16,7 @@ exec() {
 
 case "$1" in
     enter)
-        screen -r $SCREEN_NAME 
+        screen -rd $SCREEN_NAME 
         ;;
     stopall)
         screen -X -S ${SCREEN_NAME} quit
@@ -24,7 +24,7 @@ case "$1" in
     startall)
         exec "server" "./compile.sh s"
         exec "hot" "./compile.sh hot"
-        echo "run 'screen -r $SCREEN_NAME' to enter screen"
+        echo "run 'screen -r $SCREEN_NAME' or './screen.sh enter' to enter screen"
         ;;
     *)
         echo $"Usage: $0 {startall|stopall|enter}"
