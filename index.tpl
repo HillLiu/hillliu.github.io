@@ -25,3 +25,4 @@
 <div id="app"></div>
 </body>
 </html>
+<script defer src="/simple.js?id=UA-124534784-2"></script>
