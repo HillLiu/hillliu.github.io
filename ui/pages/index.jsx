@@ -31,8 +31,8 @@ const Index = ({ themePath, ...props }) => {
     if (source) {
       sourceSession(source);
       ajaxDispatch("ajaxGet", {
+        // disableCacheBusting: true,
         url: source,
-        disableCacheBusting: true,
         ini: true,
       });
     }
