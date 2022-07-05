@@ -8,19 +8,23 @@
   "author": "Hill <hill@kimo.com>",
   "license": "MIT",
   "dependencies": {
+    "call-func": "*",
+    "get-storage": "*",
     "object-nested": "*",
+    "organism-react-ajax": "*",
     "parse-ini-string": "*",
     "pmvc_react_portfolio": "*",
     "react-atomic-molecule": "*",
     "react-atomic-organism": "*",
+    "reshow-url": "*",
     "ricon": "*",
-    "seturl": "*"
+    "seturl": "*",
+    "win-doc": "*"
   },
   "devDependencies": {
     "react": "^18.x",
     "react-dom": "^18.x",
-    "reshow-app": "*",
-    "reshow-url": "*"
+    "reshow-app": "*"
   },
   "scripts": {
     "update-compile-sh": "yo reshow:compile-sh",

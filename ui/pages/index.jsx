@@ -4,6 +4,9 @@ import { ClientRoute, disableHandleAnchor, getAnchorPath } from "reshow-url";
 import { ajaxDispatch } from "organism-react-ajax";
 import { getUrl } from "seturl";
 import { sessionStorage } from "get-storage";
+import { win } from "win-doc";
+import { getEventKey } from "call-func";
+import query from "css-query-selector";
 
 const themes = {
   ...PortfolioThemes,
@@ -36,6 +39,46 @@ const Index = ({ themePath, ...props }) => {
         ini: true,
       });
     }
+    let phrase = "";
+    const head = query.one("head");
+    const handleKeydown = (e) => {
+      const eKey = getEventKey(e);
+      switch (eKey) {
+        case "13":
+        case "Enter":
+          if (phrase === "goto") {
+            location.href = "https://github.com/HillLiu/hillliu.github.io";
+          }
+          break;
+        case "27":
+        case "Escape":
+          phrase = "";
+          break;
+        case "8":
+        case "Backspace":
+          phrase = phrase.substring(0, phrase.length - 1);
+          break;
+        default:
+          const inputMap = {
+            ArrowUp: "↑",
+            ArrowRight: "→",
+            ArrowDown: "↓",
+            ArrowLeft: "←",
+          };
+          const input = 1 === eKey.length ? eKey : inputMap[eKey];
+          if (input) {
+            phrase += input;
+          }
+          break;
+      }
+      head.setAttribute("data-type", phrase);
+      head.setAttribute("data-last-type", eKey);
+    };
+
+    win().addEventListener("keydown", handleKeydown);
+    return () => {
+      win().removeEventListener("keydown", handleKeydown);
+    };
   }, []);
   return (
     <ClientRoute

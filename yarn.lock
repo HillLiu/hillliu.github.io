@@ -6339,9 +6339,9 @@ pmvc_react_landing@*:
     react-atomic-molecule "*"
 
 pmvc_react_portfolio@*:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.4.tgz#ffd5248242589f8824690371978ade168b92992e"
-  integrity sha512-+mqYTw2ENb3iJT+thDjKC9c38h3oSi2jJhaw4VEGpbQPzmqz4HbgovjLi44oSKSGYC3YBMM75L4EseaI3oeFDA==
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.5.tgz#eda8179c6f44cac89af3d80b5f179e9fd5d780f5"
+  integrity sha512-dUcQTG0AdFn3Mt3vLOiJ/BPQRvAKagDe6A25Y2IK02YnD+nBa/krtdm8yMFYJx/YEUxa4VezQq36MWxuNCpF0A==
   dependencies:
     css-query-selector "*"
     marked "*"
