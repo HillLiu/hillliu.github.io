@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/HillLiu/hillliu.github.io/tree/main.svg?style=svg)](https://circleci.com/gh/HillLiu/hillliu.github.io/tree/main)
+
 Portfolio (Client Version)
 ===
 
