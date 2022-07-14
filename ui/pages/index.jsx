@@ -49,7 +49,7 @@ const Index = ({ themePath, ...props }) => {
           if (phrase === "goto") {
             location.href = "https://github.com/HillLiu/hillliu.github.io";
           }
-          break;
+        // enter will go to Escape to clean phrase.
         case "27":
         case "Escape":
           phrase = "";
