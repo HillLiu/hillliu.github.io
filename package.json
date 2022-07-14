@@ -24,7 +24,8 @@
   "devDependencies": {
     "react": "^18.x",
     "react-dom": "^18.x",
-    "reshow-app": "*"
+    "reshow-app": "*",
+    "swc-loader": "^0.2.3"
   },
   "scripts": {
     "update-compile-sh": "yo reshow:compile-sh",
