@@ -6099,9 +6099,9 @@ organism-react-scroll-animate@*:
     react-atomic-molecule "*"
 
 organism-react-scroll-nav@*:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-1.0.6.tgz#6735fb0340289426a4af0c2bbb16aa955c272114"
-  integrity sha512-79Z6sk/+3pwgKobFf4cmRSvtZbEKFe93aiwLTBvctFI73lwE43LNoyzVsXwSg0oh38LQnyOsGT82aeEbcxa9gw==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-1.0.7.tgz#31130a3910116cfce851eeb24310d4aa1af7a606"
+  integrity sha512-3n1Z3YZ7WY6abwDSaTV6oIQRwjHpc2gqoQbWpgp1zqY1KmfYldq+ONjFLQRSNyifY0aLM2QTM5Gl33C35kya7g==
   dependencies:
     call-func "*"
     css-query-selector "*"
@@ -6324,9 +6324,9 @@ pmvc_react_landing@*:
     react-atomic-molecule "*"
 
 pmvc_react_portfolio@*:
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.7.tgz#5e4ce374dec79949783dd7869e492b026f5a6422"
-  integrity sha512-lMBwsZa7Ng2jMi1y4W6uPaAj4Wxz94H6XjxrYdcc4jCE1gqLAGuRVFf4mcdD93Jh/FMa9Fc0xTGUsKyDRtakaA==
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.8.tgz#a8a874bd9ed0d74cda9c05085f01185724969f3e"
+  integrity sha512-r9ZtnHu+KYnWApWbsGXBRpLycDu8bLH5bfAx6aOySo9ixnHpcEg80xRnONBhrDF3DDwo315b5ftCObermOLkdg==
   dependencies:
     css-query-selector "*"
     marked "*"
@@ -7381,13 +7381,14 @@ slash@^3.0.0:
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
 smooth-scroll-to@*:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-to/-/smooth-scroll-to-0.4.3.tgz#ad75c0900160bdebfae443865c6b3aa4c88d1c8f"
-  integrity sha512-EhN8G9ekEUrg1g6ux6lEPr/PmuhV3E9v4oHF6RWyXyCxRX7ODtWt+qJDuI/+OaD06yY88cXr8n5D/MKt5ujV2w==
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-to/-/smooth-scroll-to-0.4.4.tgz#ee86e96c917ec9c6ec1312c7d304f08933ae49bc"
+  integrity sha512-tUod22ydY46/gCN/FM5/1Sc1rrrBh7w+LeHDkKo7DRllieFa/9lnsiEsG+wh+NFRChJkKWH/4aeDqBLsPHfKBQ==
   dependencies:
     call-func "*"
     easing-lib "*"
     get-scroll-info "*"
+    reshow-constant "*"
 
 sockjs@^0.3.24:
   version "0.3.24"
