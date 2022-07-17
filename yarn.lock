@@ -6324,9 +6324,9 @@ pmvc_react_landing@*:
     react-atomic-molecule "*"
 
 pmvc_react_portfolio@*:
-  version "0.4.9"
-  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.9.tgz#efb538c57d60ee43db920661084423dd10fda8f8"
-  integrity sha512-gOrdKFTQ2CZgt/DrAqkPCVot5wM8h05XMcThQT2KtK7bxpYUyzxWEmKlH1J58YXjuOBQrudehs8Qwy/KMtWtMQ==
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.10.tgz#a2669273c45194720728e4816ca090436a0d90de"
+  integrity sha512-IyVsrwPULb3wTlgLNz+OClUtHYmoVKWVfqUExt1mveI6ur/Febptq8SPNuTiyW/UU3lruNyyqsvnJefYyQZiOw==
   dependencies:
     css-query-selector "*"
     marked "*"
@@ -6592,9 +6592,9 @@ react-atomic-atom@*:
     reshow-runtime "*"
 
 react-atomic-molecule@*:
-  version "4.3.9"
-  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-4.3.9.tgz#21e2d43821307f936f00394122581bbb7c5cf6b0"
-  integrity sha512-HH3SMmk6mBIvNl8/2FQ30MvKG1zryYKoJ2Q1KaXlO+UepYJIn8Rld7hB2KLjmBH4K5OXxCIlkcvYBVfW6aD8KQ==
+  version "4.3.10"
+  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-4.3.10.tgz#dd01b2201cb62e4adb06ea39b4fa03d33aed3ec9"
+  integrity sha512-8XDG+w9tLlkGJWtop5gF+SLdheJYTQWkN06atmH1mbPUk+xeL9HyMPnBJRTyliuJv5wlCEo/yIv78Z0QBFOnEA==
   dependencies:
     array.merge "*"
     call-func "*"
