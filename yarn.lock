@@ -5950,9 +5950,9 @@ organism-react-ajax@*:
     win-doc "*"
 
 organism-react-animate@*:
-  version "0.11.5"
-  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.11.5.tgz#aaa60606b6420790ac800c8a28458667bd90e7d0"
-  integrity sha512-iMAlTRQ9827XStHtr8SOqqCR91Dx2IHc/fJI6x6Xkl/PilABD2Mhcm7AEfmztfRFic8cKh7H6wjK763g4+XCOw==
+  version "0.11.6"
+  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.11.6.tgz#aabce64a4dc99a9214f0c985cbb0d1a45e13416d"
+  integrity sha512-Ono2vrRML3PkBabms+FRtxC6fX/+2UuThxJOlNBMPXl8bDIi2U/2P+DEdxxX2Fm5FTYMFCH0xW1XDDY6ryPNhg==
   dependencies:
     call-func "*"
     get-object-value "*"
@@ -6560,9 +6560,9 @@ raw-body@2.5.1, raw-body@^2.3.3:
     unpipe "1.0.0"
 
 react-atomic-atom@*:
-  version "2.2.14"
-  resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-2.2.14.tgz#e46f4a07af437481b4ced6563357221de2e54f9c"
-  integrity sha512-kx6Iv6qF3eeDLmHFXCd9iiwYFbuclihg1lQ7YozyLYi0yOj9BTvx+m/0W2TmN3OS+7IawoSBjtABDB90wrnjFQ==
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-2.2.15.tgz#1f736f2f4df32b2c98023e438a5e4edba47dc3ff"
+  integrity sha512-bExAGaSQK+yAsNV17LRU7BKZtPmD3g+TGcid7/Czz8qF3hE/EQr96tjtBnEPQUfeW2wN1g9c1coWIyymJWr0sg==
   dependencies:
     "@babel/cli" "^7.x"
     "@babel/core" "^7.x"
@@ -6592,9 +6592,9 @@ react-atomic-atom@*:
     reshow-runtime "*"
 
 react-atomic-molecule@*:
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-4.3.7.tgz#61dffc77b43fc7114d893c7aa2b496e56cd8af86"
-  integrity sha512-LLJbH8fdCiAeHGTT1gbhQcLQP2Q+IeA3ZVEwzNR0tOpdLTpYjOfzg4qFUqssa1xPi/qtZ3rtiZXzcPr/JNiP9Q==
+  version "4.3.9"
+  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-4.3.9.tgz#21e2d43821307f936f00394122581bbb7c5cf6b0"
+  integrity sha512-HH3SMmk6mBIvNl8/2FQ30MvKG1zryYKoJ2Q1KaXlO+UepYJIn8Rld7hB2KLjmBH4K5OXxCIlkcvYBVfW6aD8KQ==
   dependencies:
     array.merge "*"
     call-func "*"
@@ -6999,9 +6999,9 @@ reshow-worker@*:
     worker-loader "*"
 
 reshow@^0.17.x:
-  version "0.17.21"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.17.21.tgz#7df71d411326b9b9a79b39b82fa92431d7d861b2"
-  integrity sha512-fAtp3vcWwEKV5GIfJE087IzhoouC+PHOTpTiupvDGvz96oVG6O/9g1tuMvcQkQnbNatqELZOWUiykhlOGszczg==
+  version "0.17.22"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.17.22.tgz#358ea3e23e937701b61bdd0adb529e48a6feff98"
+  integrity sha512-DrdoVkgrn31H+FBbVBA7G6/idQ8PsSKqy9vYazv0sH1GUdk/R/EvQ5DXBLIPgWKs1Sc2D8YaiX1TlTC6KE5A1A==
   dependencies:
     call-func "*"
     get-storage "*"
