@@ -6324,9 +6324,9 @@ pmvc_react_landing@*:
     react-atomic-molecule "*"
 
 pmvc_react_portfolio@*:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.8.tgz#a8a874bd9ed0d74cda9c05085f01185724969f3e"
-  integrity sha512-r9ZtnHu+KYnWApWbsGXBRpLycDu8bLH5bfAx6aOySo9ixnHpcEg80xRnONBhrDF3DDwo315b5ftCObermOLkdg==
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.9.tgz#efb538c57d60ee43db920661084423dd10fda8f8"
+  integrity sha512-gOrdKFTQ2CZgt/DrAqkPCVot5wM8h05XMcThQT2KtK7bxpYUyzxWEmKlH1J58YXjuOBQrudehs8Qwy/KMtWtMQ==
   dependencies:
     css-query-selector "*"
     marked "*"
@@ -6830,9 +6830,9 @@ requires-port@^1.0.0:
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
 reshow-app@*:
-  version "0.17.75"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.17.75.tgz#94a23073445619cdab20b059ac852b7d17be91a9"
-  integrity sha512-+dw7GIi2yDzgKGM8ZzswwQy7hP5dMnoQrr69qlgajzqwikwrcGBh7XYhlgopBFlsJzxCsv17aNgeRhhgKbHLGA==
+  version "0.17.76"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.17.76.tgz#41168e1b7f61ab15693dd18529276cd6258aa2ff"
+  integrity sha512-j2UyFtFt3GH76BcSZP1egDKuanIFriWUJOaMPbSp4k25iUGUUZ9rAwCpRii34XwjW/X9ZNPrGQXkG/D3dGswxQ==
   dependencies:
     "@swc/core" "1.2.189"
     ansi-html-community "0.0.8"
@@ -6864,7 +6864,7 @@ reshow-app@*:
     reshow-unit "^0.17.x"
     reshow-url "^0.17.x"
     reshow-worker "*"
-    swc-loader "^0.2.3"
+    swc-loader "0.2.3"
     terser-webpack-plugin "^5.3.x"
     web-streams-polyfill "3.2.0"
     webpack "^5.71.x"
@@ -7079,9 +7079,9 @@ reusify@^1.0.4:
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
 ricon@*:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.4.0.tgz#cf9a0f200611d4d9c572e2aaab6d4c8dba83aaba"
-  integrity sha512-jiO0sdWcnpNd3iyfIWf1zRpa0/5sni0Sc097lub9r0NPcAl2pf1b0HC8Hjua0EUTkPiTEtPpH3Lew6BYUbFUtw==
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.4.2.tgz#99d28c9df02a24c2c7efe6b348df0fddd3eb0b5c"
+  integrity sha512-N9V9cu/Z8/tNXQVmRAXP5deN8T2WYvnGNLs8cBekg4ho2Gy1oWSP4RT8sQzwrtA7nADqBJbXU/hv24ZjRfNL/w==
   dependencies:
     keyframe-css "*"
     react-atomic-molecule "*"
@@ -7677,7 +7677,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-swc-loader@^0.2.3:
+swc-loader@0.2.3, swc-loader@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/swc-loader/-/swc-loader-0.2.3.tgz#6792f1c2e4c9ae9bf9b933b3e010210e270c186d"
   integrity sha512-D1p6XXURfSPleZZA/Lipb3A8pZ17fP4NObZvFCDjK/OKljroqDpPmsBdTraWhVBqUNpcWBQY1imWdoPScRlQ7A==
