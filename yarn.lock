@@ -6099,9 +6099,9 @@ organism-react-scroll-animate@*:
     react-atomic-molecule "*"
 
 organism-react-scroll-nav@*:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-1.0.10.tgz#865044ae85a3663537a4f1022f8dc21bc4fe423a"
-  integrity sha512-K9r4rlIZiwTVTgJq24nEkl6g21O8CsGX8t9w6i4C3qGv+SwLDS+TkGO9Kv0RA/sHXXo7yxFi9CCkVJdSqS65IQ==
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-1.0.11.tgz#7c9ea085afa6177db33bbe15e4ba24c43889c245"
+  integrity sha512-L/U0pwjN9choRc/dZwDUB7Kn1HQQ1YTM1Cdk87L9/lIPW4S3CJgHN+S1QEgYbOaHdI7PSL5TUg87LQCV+XPybA==
   dependencies:
     call-func "*"
     css-query-selector "*"
