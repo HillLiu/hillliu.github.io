@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, lazy } from "react";
 import PortfolioThemes from "pmvc_react_portfolio";
 import { ClientRoute, disableHandleAnchor, getAnchorPath } from "reshow-url";
 import { ajaxDispatch } from "organism-react-ajax";
@@ -10,6 +10,7 @@ import query from "css-query-selector";
 
 const themes = {
   ...PortfolioThemes,
+  OpenSource: lazy(()=>import("../pages/OpenSource")),
 };
 
 const Index = ({ themePath, ...props }) => {
