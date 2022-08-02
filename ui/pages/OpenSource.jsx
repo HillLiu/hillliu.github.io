@@ -114,9 +114,12 @@ const OpenSource = () => {
     <SemanticUI style={Styles.container}>
       <OpenSourceMenu />
       <Name />
-      <Section title="Devops, App">
+      <Section title="Personal">
         <OneLine title="Git">
           https://github.com/HillLiu?tab=repositories
+        </OneLine>
+        <OneLine title="Code Rank">
+          https://profile.codersrank.io/user/hillliu 
         </OneLine>
         <OneLine title="Description">Docker (CICD Tools), Flutter, React Native</OneLine>
       </Section>
