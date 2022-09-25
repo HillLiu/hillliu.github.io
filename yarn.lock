@@ -6394,9 +6394,9 @@ pmvc_react_landing@*:
     react-atomic-molecule "*"
 
 pmvc_react_portfolio@*:
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.14.tgz#24ed5824bc806fba16afb2200d02f71cd98a6da1"
-  integrity sha512-BMgI6e5CExNVWAEf07TmPzLZ4uYEgWWHsxHPFslu8uNQXMPNbc7elYrEhHYDtEgIzvvV0SGwOuqfzBa6fVNlOg==
+  version "0.4.15"
+  resolved "https://registry.yarnpkg.com/pmvc_react_portfolio/-/pmvc_react_portfolio-0.4.15.tgz#e1e2e8de5080b6b44a9bb6d1a0ad6e57402e45d3"
+  integrity sha512-cBTOG0YV6mwSTJoKXF5usLIJgjB/eWczCzZAxwpX8zUynbaQb0gbG4ngK7MKZN8VcHMj35d6xV18UoFwEh2KDw==
   dependencies:
     css-query-selector "*"
     marked "*"
@@ -7056,9 +7056,9 @@ reshow-worker@*:
     worker-loader "*"
 
 reshow@^0.17.x:
-  version "0.17.25"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.17.25.tgz#3447f91a0daa05b4c4d16dd6aef548ddd00f90e2"
-  integrity sha512-1bfwpPET6Jw6b1+FqRZOEXp5YZQICopcBXzR/MDQYkEJ6lOC9Fpum+ck427aJGac78hEe2cTiRX/iXEFOq+npA==
+  version "0.17.26"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.17.26.tgz#7c8355ebdafd9defc136ba6afaf3621d0c762fe9"
+  integrity sha512-z+C4qOXCZ4Y/4v2UwjH3rfd3r1Ot03BQ0zdHsUTd72u8vF9AtlJraqFD2iSvMRyM2f41h4TAq0swG9CDE7ViUw==
   dependencies:
     call-func "*"
     get-storage "*"
