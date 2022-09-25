@@ -5,5 +5,5 @@ coverage*
 v8.log
 build
 .*.sw?
-.env.view
+env.view
 webpack.pid

@@ -1,23 +1,31 @@
 {
   "chunks": {
     "main": [
-      {
-        "name": "main.bundle.js",
-        "publicPath": "./assets/main.bundle.js?46772ed"
-      }
+      "main.9278ece.bundle.js"
     ],
     "lib": [
-      {
-        "name": "lib.bundle.js",
-        "publicPath": "./assets/lib.bundle.js?46772ed"
-      }
+      "lib.9278ece.bundle.js"
     ],
     "vendor": [
-      {
-        "name": "vendor.bundle.js",
-        "publicPath": "./assets/vendor.bundle.js?46772ed"
-      }
+      "vendor.9278ece.bundle.js"
     ]
+  },
+  "assets": {
+    "main.9278ece.bundle.js": {
+      "name": "main.9278ece.bundle.js",
+      "publicPath": "./assets/main.9278ece.bundle.js?9278ece",
+      "path": "/Users/hill/git/hillliu.github.io/assets/main.9278ece.bundle.js"
+    },
+    "lib.9278ece.bundle.js": {
+      "name": "lib.9278ece.bundle.js",
+      "publicPath": "./assets/lib.9278ece.bundle.js?9278ece",
+      "path": "/Users/hill/git/hillliu.github.io/assets/lib.9278ece.bundle.js"
+    },
+    "vendor.9278ece.bundle.js": {
+      "name": "vendor.9278ece.bundle.js",
+      "publicPath": "./assets/vendor.9278ece.bundle.js?9278ece",
+      "path": "/Users/hill/git/hillliu.github.io/assets/vendor.9278ece.bundle.js"
+    }
   },
   "publicPath": "./assets/",
   "status": "done"
