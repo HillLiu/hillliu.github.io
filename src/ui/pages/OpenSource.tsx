@@ -3,7 +3,7 @@ import {
   useLazyInject,
   min,
   pageWidth,
-  Row,
+  Row as AtomRow,
   Column,
   Menu,
   Progress,
@@ -12,19 +12,30 @@ import {
   SemanticUI,
   Unsafe,
 } from "react-atomic-molecule";
-import { ReLink, Section as ReshowSection } from "reshow";
+import { Section as ReshowSection } from "reshow";
+import { AjaxLink } from "organism-react-ajax";
+// AjaxLink is what "reshow" re-exports as ReLink, but neither ships usable
+// prop types for it.
+const ReLink = AjaxLink as any;
 import Home from "ricon/Home";
 import GoToTop from "ricon/GoToTop";
 import smoothScrollTo from "smooth-scroll-to";
 import { marked } from "marked";
 // Runtime interop wraps the module; TypeScript only sees the ESM shape.
-const GitHubCalendar = lazy<any>(
-  async () => (await import("react-github-calendar")).default as any
-);
+// React.lazy always reads `.default` off the resolved value, so the named
+// export has to be re-wrapped in that shape.
+const GitHubCalendar = lazy<any>(async () => ({
+  default: (await import("react-github-calendar")).GitHubCalendar as any,
+})) as any;
+
+// react-atomic-molecule's generated types mark className as required, but it
+// is optional at runtime.
+const Row = AtomRow as any;
 
 const renderer = new marked.Renderer();
-renderer.link = function (href, title, text) {
-  const link = marked.Renderer.prototype.link.call(this, href, title, text);
+// marked 18 passes a token object, not positional args.
+renderer.link = function (token) {
+  const link = marked.Renderer.prototype.link.call(this, token);
   return link.replace("<a", "<a target='_blank' ");
 };
 

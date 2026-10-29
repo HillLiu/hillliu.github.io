@@ -1,12 +1,17 @@
 import { useEffect, lazy } from "react";
 import PortfolioThemes from "pmvc_react_portfolio";
-import { ClientRoute, disableHandleAnchor, getAnchorPath } from "reshow-url";
+import { ClientRoute } from "reshow-url";
+import { disableHandleAnchor, getAnchorPath } from "anchor-lib";
 import { ajaxDispatch } from "organism-react-ajax";
 import { getUrl } from "seturl";
 import { sessionStorage } from "get-storage";
 import { win } from "win-doc";
 import { getEventKey } from "call-func";
 import query from "css-query-selector";
+
+// reshow-url's generated d.ts declares ClientRoute as a plain class (no
+// React.Component base), so TS rejects it as JSX though it is a valid component.
+const Route = ClientRoute as any;
 
 const themes = {
   ...PortfolioThemes,
@@ -82,7 +87,7 @@ const Index = ({ themePath = undefined, ...props }) => {
     };
   }, []);
   return (
-    <ClientRoute
+    <Route
       {...props}
       themes={themes}
       defaultThemePath="Home"

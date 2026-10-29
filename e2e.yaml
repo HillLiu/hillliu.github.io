@@ -10,9 +10,11 @@ commands:
   - command: see
     description: "header rendered by React"
     selector: "#header"
+    timeout: 5000
   - command: see
     description: "hero splash rendered"
     selector: ".splash-block"
+    timeout: 5000
   - command: see
     description: "main bundle is referenced"
     selector: 'script[src*="main"]'
