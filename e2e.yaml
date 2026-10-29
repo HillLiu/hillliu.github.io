@@ -1,0 +1,18 @@
+version: "1"
+name: "hillliu.github.io"
+description: "Smoke test for the served portfolio page"
+settings:
+  timeout: 15000
+commands:
+  - command: see
+    description: "app mount point exists"
+    selector: "#app"
+  - command: see
+    description: "header rendered by React"
+    selector: "#header"
+  - command: see
+    description: "hero splash rendered"
+    selector: ".splash-block"
+  - command: see
+    description: "main bundle is referenced"
+    selector: 'script[src*="main"]'

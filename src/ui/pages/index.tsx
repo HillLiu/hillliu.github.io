@@ -13,7 +13,7 @@ const themes = {
   OpenSource: lazy(()=>import("../pages/OpenSource")),
 };
 
-const Index = ({ themePath, ...props }) => {
+const Index = ({ themePath = undefined, ...props }) => {
   useEffect(() => {
     const sourceSession = sessionStorage("source");
     let source = sourceSession() || getUrl("source");

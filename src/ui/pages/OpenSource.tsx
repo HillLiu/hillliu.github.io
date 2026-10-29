@@ -12,12 +12,15 @@ import {
   SemanticUI,
   Unsafe,
 } from "react-atomic-molecule";
-import { ReLink } from "reshow";
+import { ReLink, Section as ReshowSection } from "reshow";
 import Home from "ricon/Home";
 import GoToTop from "ricon/GoToTop";
 import smoothScrollTo from "smooth-scroll-to";
 import { marked } from "marked";
-const GitHubCalendar = lazy(async () => (await import('react-github-calendar')).default); 
+// Runtime interop wraps the module; TypeScript only sees the ESM shape.
+const GitHubCalendar = lazy<any>(
+  async () => (await import("react-github-calendar")).default as any
+);
 
 const renderer = new marked.Renderer();
 renderer.link = function (href, title, text) {
@@ -25,7 +28,7 @@ renderer.link = function (href, title, text) {
   return link.replace("<a", "<a target='_blank' ");
 };
 
-const Name = ({ firstName, lastName }) => {
+const Name = ({ firstName = undefined, lastName = undefined }) => {
   return <SemanticUI style={Styles.name}>Open Source</SemanticUI>;
 };
 
@@ -78,7 +81,7 @@ const SectionBody = ({ children, auto, name, ...others }) => {
   }
 };
 
-const Section = ({ name, title, children, auto, ...others }) => {
+const Section = ({ name = undefined, title, children, auto = undefined, ...others }) => {
   return (
     <SemanticUI style={Styles.section}>
       {title && <SectionHeader title={title} />}
@@ -89,7 +92,7 @@ const Section = ({ name, title, children, auto, ...others }) => {
   );
 };
 
-const OpenSourceMenu = ({ onDownload }) => {
+const OpenSourceMenu = ({ onDownload = undefined }) => {
   return (
     <Menu type="buttons" style={Styles.menu} className="text">
       <ReLink href="/" component={Item} atom="a">
@@ -144,7 +147,7 @@ const OpenSource = () => {
 
 export default OpenSource;
 
-const Styles = {
+const Styles: Record<string, any> = {
   bar: {
     margin: "15px 5px 0 0",
   },
